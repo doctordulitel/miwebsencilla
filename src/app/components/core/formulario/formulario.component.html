@@ -1,0 +1,55 @@
+<div class="container">
+    <h4>Rellena el Formulario para contactar</h4>
+    <hr>
+    <form [formGroup]="formularioForm" (ngSubmit)="onSubmit()">
+        <div class="form-group row has-danger">
+            <label class="col-2 col-form-label" for="nombre">* Nombre</label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre" name="nombre" #nombre>
+                <p class="control" *ngIf="mostrarError('nombre')">* Obligatorio. Pon al menos 3 caracteres</p>
+
+
+            </div>
+        </div>
+
+        <div class="form-group row has-danger">
+            <label class="col-2 col-form-label" for="apellidos">* Apellidos</label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Apellidos" formControlName="apellidos" name="apellidos" #apellidos>
+                <p class="control" *ngIf="mostrarError('apellidos')">* Obligatorio</p>
+            </div>
+        </div>
+
+        <div class="form-group row has-danger">
+            <label class="col-2 col-form-label" for="correo">* Correo</label>
+            <div class="col-8">
+                <input class="form-control" type="email" placeholder="Correo Electrónico" formControlName="correo" name="correo" #correo>
+                <p class="control" *ngIf="mostrarError('correo')">* Obligatorio. Ha de ser un email válido</p>
+            </div>
+        </div>
+
+        <div class="form-group row has-danger">
+            <label class="col-2 col-form-label" for="telefono">Telefono</label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Teléfono" formControlName="telefono" name="telefono" #telefono>
+                <p class="control" *ngIf="mostrarError('telefono')">* Ha de tener al menos 9 dígitos</p>
+            </div>
+        </div>
+
+        <div class="form-group row has-danger">
+            <label class="col-2 col-form-label" for="mensaje">* Mensaje</label>
+            <div class="col-8">
+                <textarea class="form-control" type="textarea" placeholder="Mensaje" formControlName="mensaje" name="mensaje" #mensaje></textarea>
+                <p class="control" *ngIf="mostrarError('mensaje')">* Obligatorio</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">&nbsp;</label>
+            <div class="input-group col-md-8">
+                <button [disabled]="!formularioForm.valid" type="submit" class="btn btn-outline-primary">
+              Guardar
+            </button>
+            </div>
+        </div>
+
+    </form>
