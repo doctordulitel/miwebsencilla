@@ -11,14 +11,17 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { FormulariodataComponent } from './formulariodata/formulariodata.component';
 import { FormularioeditComponent } from './formulario/formularioedit.component';
 import { FormulariopruebaComponent } from './components/core/formularioprueba/formularioprueba.component';
+import { Jumbo3Component } from './jumbo3/jumbo3.component';
+import { PreciosComponent } from './precios/precios.component';
 
 @NgModule({
   declarations: [JumboComponent, PieComponent,
-    Jumbo2Component, SlideComponent, FormularioComponent, FormulariodataComponent, FormularioeditComponent, FormulariopruebaComponent],
+// tslint:disable-next-line: max-line-length
+    Jumbo2Component, SlideComponent, FormularioComponent, FormulariodataComponent, FormularioeditComponent, FormulariopruebaComponent, Jumbo3Component, PreciosComponent],
   imports: [
     CommonModule, ReactiveFormsModule, FormsModule
   ],
   // tslint:disable-next-line:max-line-length
-  exports: [JumboComponent, PieComponent, Jumbo2Component, SlideComponent, FormularioComponent, FormulariodataComponent, FormulariopruebaComponent]
+  exports: [JumboComponent, PieComponent, Jumbo2Component, Jumbo3Component,  PreciosComponent, SlideComponent, FormularioComponent, FormulariodataComponent, FormulariopruebaComponent]
 })
 export class CoreModule { }

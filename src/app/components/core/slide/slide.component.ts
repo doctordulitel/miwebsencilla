@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slide.component.css']
 })
 export class SlideComponent implements OnInit {
+  title = 'MiWebSencilla';
 
   constructor() { }
 

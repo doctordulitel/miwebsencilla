@@ -28,6 +28,9 @@ import { InicioComponent } from './views/inicio/inicio.component';
 import { Content1Component } from './views/content1/content1.component';
 import { CoreModule } from './components/core/core.module';
 import { MenuComponent } from './components/core/menu/menu.component';
+import { JumboComponent } from './components/core/jumbo/jumbo.component';
+import { Jumbo2Component } from './components/core/jumbo2/jumbo2.component';
+import { Jumbo3Component } from './components/core/jumbo3/jumbo3.component';
 
 
 
@@ -42,7 +45,6 @@ import { MenuComponent } from './components/core/menu/menu.component';
     InicioComponent,
     Content1Component,
     MenuComponent
-
 
   ],
    imports: [
